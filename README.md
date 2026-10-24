@@ -1,132 +1,60 @@
-# Exercícios de Programação em C
+# Laços de Repetição em C
 
-Repositório dedicado a exercícios acadêmicos desenvolvidos durante meus estudos de Engenharia de Software, com o objetivo de aprender, praticar e consolidar os fundamentos da linguagem C.
+Repositório com atividades acadêmicas sobre os três laços de repetição da linguagem C: `for`, `while` e `do-while`.
 
-## Objetivo
+Os códigos foram feitos para treinar e estudar a linguagem C, e não são um projeto de produção. Os arquivos mostram os laços funcionando, com exemplos simples.
 
-Este repositório reúne exercícios propostos durante a graduação e atividades complementares realizadas para desenvolver o raciocínio lógico, compreender os conceitos da programação e aprimorar minhas habilidades na linguagem C.
+## Os três laços
 
-**Importante:** todos os códigos deste repositório têm finalidade exclusivamente acadêmica e educacional. São exercícios desenvolvidos para estudar, praticar e treinar conceitos e técnicas de programação em C, não sendo necessariamente projetos completos ou aplicações destinadas ao uso em produção.
+Um laço de repetição executa um bloco de código várias vezes, enquanto uma condição for verdadeira.
 
-## Conteúdos estudados
+### for
 
-Os exercícios serão organizados de acordo com os conteúdos abordados durante meus estudos, incluindo:
+Usado quando se sabe quantas vezes repetir.
 
-- Variáveis e tipos de dados;
-- Entrada e saída de dados;
-- Operadores aritméticos, relacionais e lógicos;
-- Estruturas condicionais (`if`, `else` e `switch`);
-- Estruturas de repetição (`for`, `while` e `do-while`);
-- Validação de dados;
-- Vetores e matrizes;
-- Funções;
-- Outros conceitos da linguagem C conforme meu aprendizado avançar.
+```c
+for (int i = 1; i <= 5; i++) {
+    printf("%d\n", i);
+}
+```
 
-*Os conteúdos serão adicionados gradualmente, conforme forem estudados e praticados.*
+### while
 
-## Tecnologias e ferramentas
+Testa a condição antes de executar o bloco, então pode nunca executar. Lembre de atualizar a variável dentro do laço para evitar loop infinito.
 
-- **Linguagem:** C
-- **Editor de código:** Visual Studio Code
-- **Compilador:** GCC
-- **Sistema operacional utilizado:** Windows
+```c
+int i = 1;
+while (i <= 5) {
+    printf("%d\n", i);
+    i++;
+}
+```
 
-## Como executar os exercícios
+### do-while
 
-Para executar os programas, é necessário ter um compilador C instalado e configurado no computador.
+Testa a condição depois de executar o bloco, então executa pelo menos uma vez. Note o `;` no final.
 
-### 1. Instale as ferramentas necessárias
+```c
+int i = 1;
+do {
+    printf("%d\n", i);
+    i++;
+} while (i <= 5);
+```
 
-- [Visual Studio Code](https://code.visualstudio.com/)
-- [Extensão C/C++ para VS Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools)
-- [MSYS2](https://www.msys2.org/), para instalar e configurar o compilador GCC no Windows.
+## Como executar
 
-**Observação:** a extensão C/C++ auxilia na escrita e depuração do código, mas não substitui o compilador.
-
-### 2. Baixe o repositório
-
-Você pode clonar o repositório pelo terminal:
+É necessário ter um compilador C instalado, como o GCC (`gcc --version` para conferir).
 
 ```bash
-git clone URL_DO_REPOSITORIO
+git clone https://github.com/vinirodrigues-hub/estrutura-repeticao-c.git
+cd estrutura-repeticao-c
+gcc for.c -o for
+./for
 ```
 
-Substitua `URL_DO_REPOSITORIO` pelo endereço HTTPS deste repositório no GitHub.
+No Windows, execute com `for.exe`. Repita para os outros arquivos, trocando o nome.
 
-Outra opção é clicar em **Code → Download ZIP** na página do repositório e extrair os arquivos.
+## Autor
 
-### 3. Abra o projeto no VS Code
-
-Abra a pasta do repositório no Visual Studio Code e localize o exercício que deseja executar.
-
-Os arquivos de código-fonte em C utilizam a extensão `.c`.
-
-### 4. Compile o exercício
-
-Abra o terminal integrado do VS Code em **Terminal → Novo Terminal** e navegue até a pasta que contém o arquivo desejado.
-
-Por exemplo, se o arquivo se chamar `exercicio01.c`, execute:
-
-```bash
-gcc exercicio01.c -o exercicio01
-```
-
-Esse comando compila o código-fonte e gera um executável chamado `exercicio01.exe` no Windows.
-
-### 5. Execute o programa
-
-No terminal do Windows, execute:
-
-```powershell
-.\exercicio01.exe
-```
-
-Se o programa solicitar informações, digite os dados diretamente no terminal.
-
-**Importante:** substitua `exercicio01.c` e `exercicio01.exe` pelos nomes dos arquivos que deseja executar.
-
-Cada exercício pode ser compilado e executado individualmente.
-
-## Como entender os códigos
-
-Os exercícios são desenvolvidos para facilitar o aprendizado progressivo da linguagem C.
-
-Para compreender um exercício, recomenda-se:
-
-1. Identificar o problema que o programa pretende resolver.
-2. Observar as variáveis declaradas e os tipos de dados utilizados.
-3. Analisar as entradas e saídas de dados.
-4. Entender as estruturas condicionais e de repetição aplicadas.
-5. Executar o programa com diferentes valores e observar os resultados.
-
-Sempre que necessário, consulte os comentários presentes no código para entender determinadas decisões de implementação.
-
-## Organização dos arquivos
-
-Os exercícios poderão ser organizados em pastas de acordo com os conteúdos estudados, facilitando a navegação e a localização dos códigos.
-
-A estrutura será atualizada conforme novos exercícios forem adicionados ao repositório.
-
-## Contexto acadêmico
-
-Este repositório faz parte da minha jornada de aprendizado em Engenharia de Software.
-
-Os códigos representam práticas e exercícios realizados com finalidade educacional, e podem conter soluções simples, implementações iniciais ou abordagens próprias de quem está aprendendo a programar.
-
-O objetivo principal é registrar minha evolução, reforçar os conhecimentos adquiridos e desenvolver uma base sólida em lógica de programação e linguagem C.
-
-## Observações
-
-- Os exercícios não têm como objetivo apresentar soluções profissionais ou definitivas.
-- Os códigos podem ser aprimorados conforme novos conceitos forem aprendidos.
-- O repositório será atualizado progressivamente durante meus estudos.
-- O conteúdo está disponível para consulta e aprendizado.
-
----
-
-**Autor:** Vinícius Silva Rodrigues - Estudante de Engenharia de Software - UDF Centro Universitário
-
-**Linguagem:** C
-
-**Finalidade:** Estudo, prática acadêmica e desenvolvimento de habilidades em programação.
-
+Feito por Vinícius Silva Rodrigues, estudante de Engenharia de Software.
