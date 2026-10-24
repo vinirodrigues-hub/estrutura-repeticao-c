@@ -1,0 +1,5 @@
+cd "while\do-while"
+gcc ex0.c -o ex0
+.\ex0
+
+depois coloque o numero do exercicio depois do 0 e execute no terminal

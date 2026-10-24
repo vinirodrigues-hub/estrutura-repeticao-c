@@ -11,7 +11,11 @@ int main() {
     printf("Digite o segundo numero: ");
     scanf("%i", &b);
     while(a < b){
-        printf("%i", a % 2 == 0);
+        if( a % 2 == 0){
+            printf("%i\n", a);
+        }
+        a++;
+        
     }
 
     return 0;
