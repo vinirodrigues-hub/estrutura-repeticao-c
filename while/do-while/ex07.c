@@ -9,9 +9,6 @@ int main() {
     do{
         printf("Digite sua nota: ");
         scanf("%f", &nota);
-        if (nota < 0){
-            break;
-        }
         contador++;
         soma = soma + nota;
         media = soma / contador;
